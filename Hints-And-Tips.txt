@@ -1,0 +1,58 @@
+- Create package.json 
+    - >> npm init
+
+- Download Cypress
+    - >> npm install --save-dev cypress@12.14.0, (any version)\
+    - Below will be created in root directly
+        - node modules (dir)
+        - package-lock.json
+    
+- Install npx (if not installed in the machine already)
+    - >> npm install -g npx 
+    
+- Set up Cypress
+    - >> npx cypress open
+    - E2E (or Component Testing if needed)
+    - Choose Browser (Chrome, FF, Electron, Edge)
+    - Cypress App can be accessed
+        - cypress.config.js is created at this point
+    - Click on Any test >> Tests will execute
+    - Set up completed
+    
+- Install necessary VS code extensions if needed
+
+- Set up BDD
+    - >> npm install --save-dev @badeball/cypress-cucumber-preprocessor
+    - Rename cypress.config.js to cypress.config.ts
+    - Copy paste the content from - 
+        - https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/quick-start.md#example-setup:~:text=import%20%7B%20defineConfig,%7D)%3B
+    - Update config file with Below
+        - >> specPattern: "**/*.feature"
+    - If errors seen import - install the necassary packages and resolve the errors first.
+        - tsconfig.json file will be created as part of the resolution.
+    - Configure/ Add below options in below path - 
+    VS code >> Settings >> Extensions >> Cucumeber Auto complete >> Settings.json to enable VS code to detect the Steps folder
+        >>      "cucumberautocomplete.strictGherkinCompletion": true,
+                "cucumberautocomplete.steps": [
+                    "cypress/support/step_definitions/*.js"
+                ]
+    - Add below in cypress.config.ts
+        >>> "cypress-cucumber-preprocessor": {
+            "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+            }
+
+    
+
+
+
+
+
+
+
+
+Issues Faced - 
+
+1. Set up with BDD was not straight forward
+    Changes in cypress.config.ts file took some time to understand, explained steps in Set up BDD above.
+
+    
