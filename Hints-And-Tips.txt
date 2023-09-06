@@ -55,4 +55,6 @@ Issues Faced -
 1. Set up with BDD was not straight forward
     Changes in cypress.config.ts file took some time to understand, explained steps in Set up BDD above.
 
-    
+2. Changes made in Feature file and Step files were not picked by the Cypress app.
+    - only 2 tests were running when 3 scenarios are written in feature file
+    - had to clear cookies for cypress app to resolve this.

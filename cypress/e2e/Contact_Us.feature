@@ -12,7 +12,6 @@ Feature: WebdriverUniversity - Contact Us Page
         And user clicks on submit button
         Then user should be presented with successful submission message
 
-
     Scenario: InValid Contact Us Form Submission - Negative scenario
 
         Given User navigates to webdriveruniversity homepage
@@ -24,6 +23,16 @@ Feature: WebdriverUniversity - Contact Us Page
         And user clicks on submit button
         Then user should be presented with unsuccessful submission message
 
+Scenario: InValid Contact Us Form Submission - Negative scenario
+
+        Given User navigates to webdriveruniversity homepage
+        When user clicks on contact us button
+        And user types a first name
+        And user types a last name
+        # And user types an email address
+        And user types a comment
+        And user clicks on submit button
+        Then user should be presented with unsuccessful submission message
 
     Scenario: Valid Contact Us Form Submission Using specifid data
     
