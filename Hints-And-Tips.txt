@@ -16,7 +16,7 @@
     - Choose Browser (Chrome, FF, Electron, Edge)
     - Cypress App can be accessed
         - cypress.config.js is created at this point
-    - Click on Any test >> Tests will execute
+    - Click on Any test >> Tests will execute2
     - Set up completed
     
 - Install necessary VS code extensions if needed
@@ -45,6 +45,10 @@
 
 
 
+PROs - 
+
+- Custom commands can be used to simplify a big task
+    - write a custom function for login and then cy.login in tests will execute that.
 
 
 
